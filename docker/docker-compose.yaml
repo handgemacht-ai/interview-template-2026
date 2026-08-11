@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: interview
+      POSTGRES_PASSWORD: interview
+      POSTGRES_DB: interview
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U interview"]
+      interval: 2s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d/
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
