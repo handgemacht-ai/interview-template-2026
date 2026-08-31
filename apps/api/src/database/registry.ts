@@ -19,8 +19,8 @@ export function createNetCeroRegistry(dataSource: DataSource) {
         const saved = await dataSource.getRepository(ReportingPeriod).save(
           new ReportingPeriod({
             year: attrs.year as number,
-            startDate: attrs.startDate as Date,
-            endDate: attrs.endDate as Date,
+            startDate: new Date(attrs.startDate as string),
+            endDate: new Date(attrs.endDate as string),
             belongsToOrganizationId: attrs.orgId as string,
           }),
         );

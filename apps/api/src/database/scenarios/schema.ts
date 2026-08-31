@@ -10,8 +10,8 @@ declare module 'ts_scenario' {
     reportingPeriods: {
       input: {
         year: number;
-        startDate: Date;
-        endDate: Date;
+        startDate: string;
+        endDate: string;
         orgId: Link<'organizations'>;
       };
       record: {
