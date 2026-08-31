@@ -10,7 +10,7 @@ export function createDataSource(): DataSource {
   return new DataSource({
     type: 'postgres',
     host: 'localhost',
-    port: 5432,
+    port: 54321,
     username: 'interview',
     password: 'interview',
     database: 'interview',

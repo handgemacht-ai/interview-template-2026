@@ -10,26 +10,26 @@ const organizations = definePrototypes('organizations', {
 const reportingPeriods = definePrototypes('reportingPeriods', {
   acme2024: {
     year: 2024,
-    startDate: new Date('2024-01-01'),
-    endDate: new Date('2024-12-31'),
+    startDate: '2024-01-01',
+    endDate: '2024-12-31',
     orgId: ref('organizations', 'acme'),
   },
   acme2025: {
     year: 2025,
-    startDate: new Date('2025-01-01'),
-    endDate: new Date('2025-12-31'),
+    startDate: '2025-01-01',
+    endDate: '2025-12-31',
     orgId: ref('organizations', 'acme'),
   },
   greentech2024: {
     year: 2024,
-    startDate: new Date('2024-01-01'),
-    endDate: new Date('2024-12-31'),
+    startDate: '2024-01-01',
+    endDate: '2024-12-31',
     orgId: ref('organizations', 'greentech'),
   },
   greentech2025: {
     year: 2025,
-    startDate: new Date('2025-01-01'),
-    endDate: new Date('2025-12-31'),
+    startDate: '2025-01-01',
+    endDate: '2025-12-31',
     orgId: ref('organizations', 'greentech'),
   },
 });
