@@ -5,6 +5,7 @@ import { ClsPluginTransactional } from '@nestjs-cls/transactional';
 import { TransactionalAdapterTypeOrm } from '@nestjs-cls/transactional-adapter-typeorm';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { DataSource } from 'typeorm';
+import { getDbConfig } from '../database/db-config';
 import { OrganizationModule } from '../domain/organizations/organization.module';
 import { ReportingPeriodModule } from '../domain/reporting-periods/reporting-period.module';
 import { EmissionEntryModule } from '../domain/emission-entries/emission-entry.module';
@@ -13,11 +14,7 @@ import { EmissionEntryModule } from '../domain/emission-entries/emission-entry.m
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'interview',
-      password: 'interview',
-      database: 'interview',
+      ...getDbConfig(),
       synchronize: true,
       autoLoadEntities: true,
       namingStrategy: new SnakeNamingStrategy(),

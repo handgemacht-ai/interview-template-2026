@@ -102,6 +102,17 @@ Key patterns:
 | `pnpm db:down` | Stop PostgreSQL |
 | `pnpm db:reset` | Reset database (removes all data) |
 | `pnpm build` | Build all projects |
+| `pnpm test` | Run unit tests |
+| `pnpm e2e:api` | Run the API HTTP smoke test |
+| `pnpm e2e:web` | Run the Playwright browser smoke test |
+| `pnpm e2e` | Run all e2e tests (API + web) |
+
+## Tests
+
+- `pnpm test` runs the unit tests.
+- `pnpm e2e:api` runs the API HTTP smoke test against a seeded Postgres. Configure the connection via `DB_HOST`/`DB_PORT`/`DB_USER`/`DB_PASSWORD`/`DB_NAME` (defaults to `localhost:5432/interview`).
+- `pnpm e2e:web` runs the Playwright browser smoke test. Requires a one-time `npx playwright install chromium`.
+- `pnpm e2e` runs both.
 
 ## What We Look For
 
