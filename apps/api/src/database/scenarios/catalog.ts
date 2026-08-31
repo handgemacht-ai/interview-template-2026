@@ -81,7 +81,7 @@ const emissionEntries = definePrototypes('emissionEntries', {
     reportingPeriodId: ref('reportingPeriods', 'acme2025'),
   },
   acme2025_travel: {
-    scope: EmissionScope.SCOPE_3,
+    scope: EmissionScope.SCOPE_1,
     category: 'Business travel',
     source: 'Company Car Travel',
     value: 62.4,
