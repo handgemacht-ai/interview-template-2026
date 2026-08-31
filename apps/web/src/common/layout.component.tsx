@@ -6,7 +6,7 @@ export function Layout() {
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" component="div">
+          <Typography variant="h6" component="h1">
             ESG Emissions Tracker
           </Typography>
         </Toolbar>

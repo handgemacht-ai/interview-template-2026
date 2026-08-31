@@ -7,11 +7,7 @@ export class AppShellPage {
     await this.page.goto('/');
   }
 
-  appBar(): Locator {
-    return this.page.locator('header.MuiAppBar-root');
-  }
-
   titleBar(): Locator {
-    return this.appBar().getByText('ESG Emissions Tracker');
+    return this.page.getByRole('heading', { name: 'ESG Emissions Tracker' });
   }
 }
