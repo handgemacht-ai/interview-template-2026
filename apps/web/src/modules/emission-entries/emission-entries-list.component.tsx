@@ -36,6 +36,8 @@ function getScopeChipProps(scope: EmissionScope) {
       return { label: 'Scope 1', color: 'primary' as const, sx: { backgroundColor: '#1976d2', color: '#fff' } };
     case EmissionScope.SCOPE_2:
       return { label: 'Scope 2', color: 'warning' as const, sx: { backgroundColor: '#ed6c02', color: '#fff' } };
+    case EmissionScope.SCOPE_3:
+      return { label: 'Scope 3', color: 'success' as const, sx: { backgroundColor: '#2e7d32', color: '#fff' } };
     default:
       return { label: scope, color: 'default' as const, sx: {} };
   }
