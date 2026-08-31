@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { AppShellPage } from './pages/app-shell.page';
 
 test('app shell renders the title bar', async ({ page }) => {
-  await page.goto('/');
-  await expect(page.getByText('ESG Emissions Tracker')).toBeVisible();
+  const shell = new AppShellPage(page);
+  await shell.goto();
+  await expect(shell.titleBar()).toBeVisible();
 });
