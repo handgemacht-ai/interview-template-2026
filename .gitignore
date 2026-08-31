@@ -49,3 +49,5 @@ Thumbs.db
 vite.config.*.timestamp*
 test-output
 
+test-results/
+playwright-report/
