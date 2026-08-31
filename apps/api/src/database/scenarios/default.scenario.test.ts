@@ -45,7 +45,7 @@ describe('default scenario (netcero-base)', () => {
       result,
       catalog.emissionEntries.acme2025_travel,
       'scope',
-      EmissionScope.SCOPE_3,
+      EmissionScope.SCOPE_1,
     );
 
     const org = result.mustGet(catalog.organizations.acme.ref);
@@ -61,7 +61,7 @@ describe('default scenario (netcero-base)', () => {
     const scenarioTravel = scenarioResult.mustGet(
       catalog.emissionEntries.acme2025_travel.ref,
     );
-    expect(scenarioTravel.scope).toBe(EmissionScope.SCOPE_3);
+    expect(scenarioTravel.scope).toBe(EmissionScope.SCOPE_1);
     expect(scenarioTravel.reportingPeriodId).toBe(
       scenarioResult.mustGet(catalog.reportingPeriods.acme2025.ref).id,
     );

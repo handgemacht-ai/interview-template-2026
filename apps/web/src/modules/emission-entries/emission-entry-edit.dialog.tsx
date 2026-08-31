@@ -84,7 +84,6 @@ export function EmissionEntryEditDialog({
                 <Select {...field} label="Scope">
                   <MenuItem value={EmissionScope.SCOPE_1}>Scope 1</MenuItem>
                   <MenuItem value={EmissionScope.SCOPE_2}>Scope 2</MenuItem>
-                  <MenuItem value={EmissionScope.SCOPE_3}>Scope 3</MenuItem>
                 </Select>
                 {error && <FormHelperText>{error.message}</FormHelperText>}
               </FormControl>
